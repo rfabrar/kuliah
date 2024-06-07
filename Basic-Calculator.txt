@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+
+  char calc;
+  double first, second;
+
+  printf("Operator (+, -, *, /): ");
+  scanf("%c", &calc);
+
+  printf("Value 1: ");
+  scanf("%lf", &first);
+  
+  printf("Value 2: ");
+  scanf("%lf", &second);
+
+  switch (calc) {
+
+    case '+':
+      printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
+      break;
+
+    case '-':
+      printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
+      break;
+
+    case '*':
+      printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
+      break;
+
+    case '/':
+      printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
+      break;
+   
+    default:
+      printf("Error! operator tidak valid");
+      
+  }
+
+  return 0;
+}
